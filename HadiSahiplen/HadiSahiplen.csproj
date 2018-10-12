@@ -89,11 +89,117 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\icon\addto-1.png" />
+    <Content Include="Images\icon\addto-2.png" />
+    <Content Include="Images\icon\addto-3.png" />
+    <Content Include="Images\icon\addto-cart.png" />
+    <Content Include="Images\icon\addtocart.png" />
+    <Content Include="Images\icon\admin-ic.png" />
+    <Content Include="Images\icon\blog-like.png" />
+    <Content Include="Images\icon\calander.png" />
+    <Content Include="Images\icon\camp.png" />
+    <Content Include="Images\icon\care.png" />
+    <Content Include="Images\icon\cart-ic.png" />
+    <Content Include="Images\icon\comment.png" />
+    <Content Include="Images\icon\customer-support.png" />
+    <Content Include="Images\icon\dogfeek.png" />
+    <Content Include="Images\icon\dribbble-ic.png" />
+    <Content Include="Images\icon\error.jpg" />
+    <Content Include="Images\icon\fb-ic.png" />
+    <Content Include="Images\icon\ftr-customer.png" />
+    <Content Include="Images\icon\ftr-dribbble.png" />
+    <Content Include="Images\icon\ftr-email.png" />
+    <Content Include="Images\icon\ftr-fb.png" />
+    <Content Include="Images\icon\ftr-g+.png" />
+    <Content Include="Images\icon\ftr-link.png" />
+    <Content Include="Images\icon\ftr-ln.png" />
+    <Content Include="Images\icon\ftr-location.png" />
+    <Content Include="Images\icon\ftr-tumbler.png" />
+    <Content Include="Images\icon\ftr-tw.png" />
+    <Content Include="Images\icon\g+-ic.png" />
+    <Content Include="Images\icon\home.png" />
+    <Content Include="Images\icon\in-ic.png" />
+    <Content Include="Images\icon\insurance.png" />
+    <Content Include="Images\icon\intro-icon-1.png" />
+    <Content Include="Images\icon\intro-icon-2.png" />
+    <Content Include="Images\icon\intro-icon-3.png" />
+    <Content Include="Images\icon\like-icon.png" />
+    <Content Include="Images\icon\location-ic.png" />
+    <Content Include="Images\icon\medal.png" />
+    <Content Include="Images\icon\nutrition.png" />
+    <Content Include="Images\icon\phone-ic.png" />
+    <Content Include="Images\icon\product-remove.png" />
+    <Content Include="Images\icon\quotes.png" />
+    <Content Include="Images\icon\search.png" />
+    <Content Include="Images\icon\separator-1.png" />
+    <Content Include="Images\icon\separator-2.png" />
+    <Content Include="Images\icon\separator-3.png" />
+    <Content Include="Images\icon\separator.jpg" />
+    <Content Include="Images\icon\seprator-1.png" />
+    <Content Include="Images\icon\share.png" />
+    <Content Include="Images\icon\tags.png" />
+    <Content Include="Images\icon\time-ic.png" />
+    <Content Include="Images\icon\time.png" />
+    <Content Include="Images\icon\tumbler-ic.png" />
+    <Content Include="Images\icon\tw-ic.png" />
+    <Content Include="Images\icon\visa-master-card.png" />
+    <Content Include="Images\icon\wishlist.png" />
+    <Content Include="Images\Logo\favicon.png" />
+    <Content Include="Images\Logo\logo.png" />
+    <Content Include="Images\slider-image\slider-1.jpg" />
+    <Content Include="Images\slider-image\slider-2.jpg" />
+    <Content Include="Images\slider-image\slider-3.jpg" />
+    <Content Include="libraries\animate\animate.min.css" />
+    <Content Include="libraries\appear\jquery.appear.js" />
+    <Content Include="libraries\bootstrap\bootstrap.min.css" />
+    <Content Include="libraries\bootstrap\bootstrap.min.js" />
+    <Content Include="libraries\fonts\font-awesome.min.css" />
+    <Content Include="libraries\fonts\fontawesome-webfont.svg" />
+    <Content Include="libraries\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="libraries\loader\loaders.min.css" />
+    <Content Include="libraries\modernizr\modernizr.js" />
+    <Content Include="libraries\navigation-menu.css" />
+    <Content Include="libraries\number\jquery.animateNumber.min.js" />
+    <Content Include="libraries\owl-carousel\owl.carousel.css" />
+    <Content Include="libraries\owl-carousel\owl.carousel.min.js" />
+    <Content Include="libraries\owl-carousel\owl.theme.css" />
+    <Content Include="libraries\plugins.css" />
+    <Content Include="libraries\price-filter\jquery-ui.min.css" />
+    <Content Include="libraries\price-filter\jquery-ui.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="libraries\shortcodes.css" />
+    <Content Include="libraries\style.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.11.3.intellisense.js" />
+    <Content Include="Scripts\functions.js" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,7 +207,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="libraries\fonts\fontawesome-webfont.eot" />
+    <Content Include="libraries\fonts\fontawesome-webfont.ttf" />
+    <Content Include="libraries\fonts\fontawesome-webfont.woff" />
+    <Content Include="libraries\fonts\fontawesome-webfont.woff2" />
+    <Content Include="libraries\fonts\FontAwesome.otf" />
+    <Content Include="libraries\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="libraries\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="libraries\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="libraries\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.11.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,7 +229,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

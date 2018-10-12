@@ -1,0 +1,248 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Layout</title>
+    <link rel="icon" type="image/x-icon" href="~/Images/Logo/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
+
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images//apple-touch-icon-72x72-precomposed.png">
+
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="images//apple-touch-icon-57x57-precomposed.png">
+
+    <!-- Library - Loader CSS -->
+
+    <link href="~/libraries/loader/loaders.min.css" rel="stylesheet" />
+
+
+    <link href="~/libraries/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/libraries/fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/libraries/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="~/libraries/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="~/libraries/animate/animate.min.css" rel="stylesheet" />
+    <link href="~/libraries/price-filter/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/libraries/navigation-menu.css" rel="stylesheet" />
+    <link href="~/libraries/plugins.css" rel="stylesheet" />
+    <link href="~/libraries/shortcodes.css" rel="stylesheet" />
+    <link href="~/libraries/style.css" rel="stylesheet" />
+
+
+</head>
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+    <div id="site-loader" class="load-complete">
+        <div class="loader">
+            <div class="loader-inner ball-clip-rotate">
+                <div></div>
+            </div>
+        </div>
+    </div><!-- Loader /- -->
+    <a id="top"></a>
+
+    <div class="main-container">
+        <header class="header-main">
+            <!-- Top Header -->
+            <div class="top-header container-fluid no-padding">
+                <div class="col-md-4 col-sm-4 col-xs-4 no-padding color-red"></div>
+                <div class="col-md-4 col-sm-4 col-xs-4 no-padding color-green"></div>
+                <div class="col-md-4 col-sm-4 col-xs-4 no-padding color-yellow"></div>
+                <!-- Container -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-6">
+                            <p>Leave A Message: <a href="mailto:info@petcare.com">info@petcare.com</a></p>
+                        </div>
+                        <div class="social col-md-4 col-sm-4 col-xs-6 pull-right">
+                            <ul class="no-bottom-margin">
+                                <li><a href="#"><img src="/Images/icon/tw-ic.png" alt="Twitter" /></a></li>
+                                <li><a href="#"><img src="/Images/icon/fb-ic.png" alt="Facebook" /></a></li>                       
+                                <li><a href="#"><img src="/Images/icon/dribbble-ic.png" alt="dribbler" /></a></li>
+                                <li><a href="#"><img src="/Images/icon/in-ic.png" alt="In" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- container /- -->
+            </div><!-- Top Header /- -->
+            <!-- Logo Block -->
+            <div class="middle-header container-fluid no-padding">
+                <!-- Container -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 logo-block pull-left">
+                            <a href="#">
+                                <img src="~/Images/Logo/logo.png" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="col-md-9 pull-right">
+                            <div class="location">
+                                <img src="/Images/icon/location-ic.png" alt="Location" />
+                                <p><span>Our Location</span> 50- Design Street, Texas</p>
+                            </div>
+                            <div class="time-scheduled">
+                                <img src="/Images/icon/time-ic.png" alt="time" />
+                                <p><span>Mon - Sat</span> 8 am - 10 pm</p>
+                            </div>
+                            <div class="phone">
+                                <img src="/Images/icon/phone-ic.png" alt="phone" />
+                                <p><span>Call Us</span> +1 (0) 234 56 789</p>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div><!-- Container /- -->
+            </div><!-- Logo Block /- -->
+            <nav class="navbar ow-navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-brand logo-block">
+                                <a href="#">
+                                    <img src="images/logo.png" alt="Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li class="dropdown">
+                                    <a href="shop.html" title="product list" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+                                    <i class="ddl-switch fa fa-angle-down"></i>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="shop-pets.html">Pets List</a></li>
+                                        <li><a href="shop-details.html">Product Details</a></li>
+                                        <li><a href="checkout.html">Place Order</a></li>
+                                     
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" title="Pages" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                    <i class="ddl-switch fa fa-angle-down"></i>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="error.html">Error</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="blog.html" title="Blog" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                    <i class="ddl-switch fa fa-angle-down"></i>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="single-blog.html">Single Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact-us.html">Contact US</a></li>
+                            </ul>
+                        </div>
+                        <a href="#">Get An Appointment</a>
+                    </div>
+                </div>
+            </nav>
+        </header><!-- Header /- -->
+
+        @RenderBody()
+
+
+    </div>
+    <footer class="footer-main">
+        <!-- Container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <aside class="widget widget-about">
+                        <h3 class="widget-title">about Us</h3>
+                        <p>Hello we are Comre. We are here to provide you the best offers through our coupons. Hello we are company.</p>
+                        <ul>
+                            <li><img src="/Images/icon/ftr-location.png" alt="Address" />Washington Square Park, <span>NY, United States</span></li>
+                            <li><img src="/Images/icon/ftr-customer.png" alt="Phone" /> Customer Support : <span>+ 124 45 76 678</span></li>
+                            <li><img src="/Images/icon/ftr-email.png" alt="Mail" /><span>Email :</span><a href="mailto:mail@woodsman.com"> mail@woodsman.com</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <aside class="widget widget-links">
+                        <h3 class="widget-title">Working Time</h3>
+                        <ul>
+                            <li>Monday <span>08:00 am  -  10:00 pm</span></li>
+                            <li>tuesday <span>08:00 am  -  10:00 pm</span></li>
+                            <li>wednesday <span>08:00 am  -  10:00 pm</span></li>
+                            <li>thursday <span>08:00 am  -  10:00 pm</span></li>
+                            <li>friday <span>08:00 am  -  10:00 pm</span></li>
+                            <li>Week End <span>CloSed</span></li>
+                            <li>Emergency Unit <span>Open Any Time</span></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <aside class="widget widget-subscribe">
+                        <div class="subscribe-box">
+                            <h4>Subscribe To Mail!</h4>
+                            <p>Get our Daily email n.ewsletter with Special Services, Updates, Offers and more</p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">SignUp</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div>
+                        <ul>
+                            <li><a href="#"><img src="/Images/icon/ftr-fb.png" alt="ftr" /></a></li>
+             
+                            <li><a href="#"><img src="/Images/icon/ftr-tumbler.png" alt="ftr" /></a></li>
+                            <li><a href="#"><img src="/Images/icon/ftr-dribbble.png" alt="ftr" /></a></li>
+                            <li><a href="#"><img src="/Images/icon/ftr-ln.png" alt="ftr" /></a></li>
+                            <li><a href="#"><img src="/Images/icon/ftr-tw.png" alt="ftr" /></a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div><!-- Container /- -->
+        <div class="bottom-footer container-fluid no-padding">
+            <div class="container">
+                <div class="row">
+                    <ul class="col-md-5 pull-left">
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Client Support</a></li>
+                    </ul>
+
+                    <div class="col-md-7 pull-right">
+                        <p class="copyright">copyrights &copy; 2015 Mice Cab. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="~/Scripts/jquery-1.11.3.min.js"></script>
+    <script src="~/libraries/modernizr/modernizr.js"></script>
+    <script src="~/libraries/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.easing.min.js"></script>
+    <script src="~/libraries/appear/jquery.appear.js"></script>
+    <script src="~/libraries/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/libraries/number/jquery.animateNumber.min.js"></script>
+    <script src="~/libraries/price-filter/jquery-ui.min.js"></script>
+    <script src="~/Scripts/functions.js"></script>
+</body>
+</html>
