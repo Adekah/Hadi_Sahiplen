@@ -11,16 +11,21 @@
     <!-- Container -->
     <div class="container">
         <div class="section-header">
-            <h3>Our Team On Service</h3>
-            <p>They will have to make the best of things its an uphill climb</p>
+            <h3>Güncel Sahiplendirme İlanları</h3>
+            <p> <b style="    color: #1377c5;
+    font-size: 15px;">Bir kedim bile yok Demeyin Hadi Sahiplenin</b></p>
         </div>
+
         <div class="row">
             <div class="team-thumb">
-                <div class="col-md-12">
-                    <div class="team-member">
-                        <div class="team-image-box" style="max-width:275px">
-                            <img src="~/Images/AdvertsPP/team-member-1.jpg" alt="Team Member">
-                            <div class="team-content"><h3>Dr. John Francis<span>Veterinary Chief</span></h3></div>
+                @foreach (HadiSahiplen.Models.Tbl_Advert_Vİew Adverts in ViewBag.Adverts)
+                {
+             
+                    <div class="team-member" style="max-width:300px;">
+                        <div class="team-image-box">
+                            <img src="~/Images/AdvertsPP/@Adverts.Advert_ProfilePhoto" alt="Team Member" style="height:380px;">
+                            <div class="team-content"><h3><b>@Adverts.Pet_Name</b><span>@Adverts.Pet_Kind</span><span>@Adverts.City/@Adverts.District</span></h3></div>
+
                         </div>
                         <div class="team-social-icon">
                             <ul class="list-inline">
@@ -31,9 +36,9 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+   
 
-
+                }
             </div>
         </div>
     </div><!-- Container /- -->

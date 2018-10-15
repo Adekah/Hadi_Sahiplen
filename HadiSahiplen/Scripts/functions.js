@@ -227,9 +227,9 @@
 		if( $(".team-thumb").length ) {
 			$(".team-thumb").owlCarousel({
 				loop: true,
-				margin: 0,
-				nav: false,
-				dots: false,
+                margin: 0,
+                nav: false,
+                dots: false,
 				autoplay: true,
 				responsive:{
 					0:{

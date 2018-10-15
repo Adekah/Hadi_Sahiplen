@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HadiSahiplen.Models;
+using HadiSahiplen.Data;
 
 namespace HadiSahiplen.Controllers
 {
@@ -11,6 +13,9 @@ namespace HadiSahiplen.Controllers
         // GET: Default
         public ActionResult Index()
         {
+
+            ViewBag.Adverts = Data.Data.Adverts();
+
             return View();
         }
     }

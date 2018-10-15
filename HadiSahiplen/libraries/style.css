@@ -175,7 +175,7 @@ ul {
 	margin-top: 0px;
 	font-size: 20px;
 	letter-spacing: 1px;
-	background-image: url("images/icon/separator.jpg");
+	background-image: url("/Images/icon/separator.jpg");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	padding-bottom: 16px;
@@ -902,6 +902,6 @@ ul {
 /* ## min-width: 1200 */
 @media (min-width: 1200px) {
     .container {
-        width: 100%;
+        width: 85%;
     }
 }
