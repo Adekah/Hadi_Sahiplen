@@ -12,15 +12,14 @@
     <div class="container">
         <div class="section-header">
             <h3>Güncel Sahiplendirme İlanları</h3>
-            <p> <b style="    color: #1377c5;
-    font-size: 15px;">Bir kedim bile yok Demeyin Hadi Sahiplenin</b></p>
+            <p>  <b style="color: #1377c5;font-size: 15px;">Bir kedim bile yok Demeyin Hadi Sahiplenin</b> </p>
         </div>
 
         <div class="row">
             <div class="team-thumb">
                 @foreach (HadiSahiplen.Models.Tbl_Advert_Vİew Adverts in ViewBag.Adverts)
                 {
-             
+
                     <div class="team-member" style="max-width:300px;">
                         <div class="team-image-box">
                             <img src="~/Images/AdvertsPP/@Adverts.Advert_ProfilePhoto" alt="Team Member" style="height:380px;">
@@ -36,7 +35,7 @@
                             </ul>
                         </div>
                     </div>
-   
+
 
                 }
             </div>
@@ -44,3 +43,51 @@
     </div><!-- Container /- -->
     <div class="section-padding"></div>
 </div><!-- Team /- -->
+<!-- Intro -->
+<div id="intro" class="intro container-fluid no-padding">
+    <div class="section-padding"></div>
+    <!-- Container -->
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+            <h2><b>SAHİPLENMEDEN ÖNCE</b></h2>
+            <p style="font-size:15PX; color:#1377c5"><b>ŞUNLARI BİLMEK İYİ OLACAKTIR</b></p>
+        </div><!-- Section Header /- -->
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-images bgcolor-default">
+                    <img src="/Images/intro/intro-1.jpg" alt="intro-1">
+                    <div class="content-box">
+                        <h3>Sağlık ve TEMİZLİK <span>Aşı takvimi ve Bakım </span><i><img src="/Images/icon/intro-icon-1.png" alt="Intro Icon" /></i></h3>
+                        <p>Evcil Dostunuzun Aşı takvimini aksatmamanız hem siz hem küçük dostunuz için sağlıklı ve huzurlu olacaktır.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-images bgcolor-green">
+                    <img src="/Images/intro/intro-2.jpg" alt="intro-2">
+                    <div class="content-box">
+                        <h3>İHTİYAÇ DUYABİLECEKLERİNİZ<span>Mamalar,Taşıma Çantaları vb</span><i><img src="/Images/icon/intro-icon-2.png" alt="Intro Icon" /></i></h3>
+                        <p> İhtiyaç duyabileceklerinizin detaylı listesi için Aşağıdaki butona tıklayın</p>
+                        <a href="#" title="Detay Sayfası" class="btn btn-primary">Detay Sayfası </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-images bgcolor-yellow">
+                    <img src="/Images/intro/intro-3.jpg" alt="intro-3">
+                    <div class="content-box">
+                        <h3>Yararları <span>Evcil hayvan sahibi olmanın yararları</span><i><img src="/Images/icon/intro-icon-3.png" alt="Intro Icon" /></i></h3>
+                        <p class="benefit fa fa-dot-circle-o " style="margin-bottom:-5px;"> Moralimizi yükseltirler </p><br />
+                        <p class="fa fa-dot-circle-o benefit" style="margin-bottom:-5px;"> Aile ilişkilerini geliştirir </p><br />
+                        <p class="fa fa-dot-circle-o benefit" style="margin-bottom:-5px;"> Streisimiz azaltır</p><br />
+                        <p class="fa fa-dot-circle-o benefit" style="margin-bottom:-5px;"> Egzersiz yapmamızı sağlar </p>
+                        @*<a href="#" title="Read More">Read More <i class="fa fa-angle-double-right"></i></a>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Container /- -->
+    <div class="section-padding"></div>
+</div><!-- Intro /- -->

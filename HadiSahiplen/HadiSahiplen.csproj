@@ -103,6 +103,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Side.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -165,6 +166,10 @@
     <Content Include="Images\icon\tw-ic.png" />
     <Content Include="Images\icon\visa-master-card.png" />
     <Content Include="Images\icon\wishlist.png" />
+    <Content Include="Images\intro\intro-1.jpg" />
+    <Content Include="Images\intro\intro-2.jpg" />
+    <Content Include="Images\intro\intro-3.jpg" />
+    <Content Include="Images\intro\intro.jpg" />
     <Content Include="Images\Logo\favicon.png" />
     <Content Include="Images\Logo\logo.png" />
     <Content Include="Images\slider-image\slider-1.jpg" />
@@ -224,6 +229,11 @@
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -283,6 +293,7 @@
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Scripts\jquery-1.11.3.min.map" />
+    <Content Include="Views\Default\Adverts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
