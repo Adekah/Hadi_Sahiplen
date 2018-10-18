@@ -237,6 +237,7 @@
 }
 .pet-images .content-box h3 i {
 	opacity: 0.3;
+
 }
 .pet-images .content-box p {
 	text-align: center;
@@ -883,6 +884,7 @@
 .product-image .cart,
 .product-image .wishlist {
 	display: none;
+
 }
 .product-box:hover .cart {
 	position: absolute;

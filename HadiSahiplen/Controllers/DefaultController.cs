@@ -18,5 +18,15 @@ namespace HadiSahiplen.Controllers
 
             return View();
         }
+
+        public ActionResult Adverts()
+        {
+            ViewBag.Adverts = Data.Data.Adverts();
+            return View();
+        }
+        public ActionResult AdvertDetail()
+        {
+            return View();
+        }
     }
 }

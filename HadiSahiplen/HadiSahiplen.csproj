@@ -104,13 +104,16 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Side.css" />
+    <Content Include="Content\theme-elements.css" />
+    <Content Include="Content\theme.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\AdvertsPP\team-member-1.jpg" />
-    <Content Include="Images\AdvertsPP\team-member-2.jpg" />
-    <Content Include="Images\AdvertsPP\team-member-3.jpg" />
-    <Content Include="Images\AdvertsPP\team-member-4.jpg" />
+    <Content Include="Images\AdvertsPP\1.jpg" />
+    <Content Include="Images\AdvertsPP\2.jpg" />
+    <Content Include="Images\AdvertsPP\3.jpg" />
+    <Content Include="Images\AdvertsPP\4.jpg" />
+    <Content Include="Images\AdvertsPP\5.jpeg" />
     <Content Include="Images\icon\addto-1.png" />
     <Content Include="Images\icon\addto-2.png" />
     <Content Include="Images\icon\addto-3.png" />
@@ -172,6 +175,7 @@
     <Content Include="Images\intro\intro.jpg" />
     <Content Include="Images\Logo\favicon.png" />
     <Content Include="Images\Logo\logo.png" />
+    <Content Include="Images\Logo\paw.png" />
     <Content Include="Images\slider-image\slider-1.jpg" />
     <Content Include="Images\slider-image\slider-2.jpg" />
     <Content Include="Images\slider-image\slider-3.jpg" />
@@ -294,6 +298,7 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Scripts\jquery-1.11.3.min.map" />
     <Content Include="Views\Default\Adverts.cshtml" />
+    <Content Include="Views\Default\AdvertDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

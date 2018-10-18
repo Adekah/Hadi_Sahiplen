@@ -5,3 +5,10 @@
     margin-bottom: -5px;
     font-size: 17px
 }
+#advert_box {
+    background-color: #3c88c4;
+    width: 300px;
+    height: 450px;
+    color: white;
+    border-radius:30px;
+}

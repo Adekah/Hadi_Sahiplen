@@ -1,9 +1,130 @@
-﻿@model HadiSahiplen.Models.Tbl_Advert_Vİew
+﻿
 
 @{
     ViewBag.Title = "Adverts";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2>Adverts</h2>
-
+<!-- Product List -->
+<div id="product-list" class="product-list container-fluid no-padding">
+    <div class="section-padding"></div>
+    <!-- Container -->
+    <div class="container">
+        <div class="row">
+            <!-- Product Filter -->
+            <div class="col-md-3 col-sm-4">
+                <!-- Widget Select Product -->
+                <aside class="widget widget-select-product">
+                    <h3>Select Product</h3>
+                    <ul>
+                        <li><input type="checkbox" /> Neck Strap <span>158</span></li>
+                        <li><input type="checkbox" /> Pet Food <span>430</span></li>
+                        <li><input type="checkbox" /> Pet Toys <span>279</span></li>
+                        <li><input type="checkbox" /> Pet Outfits <span>365</span></li>
+                        <li><input type="checkbox" /> Pet Cage <span>189</span></li>
+                        <li><input type="checkbox" /> Soap &amp; Brushes <span>763</span></li>
+                    </ul>
+                </aside><!-- Widget Select Product /- -->
+                <!-- Widget Filter Price -->
+                <aside class="widget widget-price-filter">
+                    <h3>Filter By Price</h3>
+                    <div class="price-filter">
+                        <div id="slider-range"></div>
+                        <div class="price-input">
+                            <label>Price:</label>
+                            <span id="amount"></span>
+                            <label> - </label>
+                            <span id="amount2"></span>
+                        </div>
+                        <a href="#" class="filter">Filter</a>
+                    </div>
+                </aside><!-- Widget Filter Price /- -->
+                <!-- Widget Brands -->
+                <aside class="widget widget-brands">
+                    <h3>Brands</h3>
+                    <ul>
+                        <li><input type="checkbox" /> Pet Store <span>72</span></li>
+                        <li><input type="checkbox" /> Shoppy Pets <span>24</span></li>
+                        <li><input type="checkbox" /> E-Pet <span>10</span></li>
+                        <li><input type="checkbox" /> Healthy Pet food <span>56</span></li>
+                        <li><input type="checkbox" /> Nutro Pet <span>12</span></li>
+                        <li><input type="checkbox" /> Pet Daisy <span>88</span></li>
+                    </ul>
+                </aside><!-- Widget Brands /- -->
+                <!-- Widget Best Sellers -->
+       
+            </div><!-- Product Filter /- -->
+            <!-- Product Box -->
+            <div class="col-md-9 col-sm-8">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h3>Our Best Quality Products</h3>
+                    <p>In a freak mishap ranger and its pilot captain william buck rogers are blown</p>
+                </div><!-- Section Header /- -->
+                <!-- Products -->
+                <div class="products">
+                    <!-- Product Box -->
+                    @foreach (HadiSahiplen.Models.Tbl_Advert_Vİew Adverts in ViewBag.Adverts)
+                    {
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="product-box"  id="advert_box">
+    
+                        <div class="product-image">
+                            <img src="~/Images/AdvertsPP/@Adverts.Advert_ProfilePhoto"style="height: 350px;width: auto;border-radius:20px;" />
+    
+                            <a class="cart" href="AdvertDetail/@Adverts.Advert_ID"><i><img src="~/Images/Logo/paw.png" style="width:50px;" alt="Add To Cart" /></i>HADİ SAHİPLEN</a>
+                            <div class="wishlist">
+                                <a href="#"><img src="~/Images/icon/like-icon.png" alt="like icon" /></a>
+                                <a href="#"><img src="~/Images/icon/wishlist.png" alt="wishlist" /></a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <b style="font-size:16px;margin:10px;">@Adverts.Pet_Name</b><br />
+                            <b>@Adverts.Pet_Kind</b><br />
+                            <b>@Adverts.City/@Adverts.District</b><br />
+                            
+                        </div>
+                    </div>
+                </div><!-- Product Box /- -->
+                    }
+                </div><!-- Products /- -->
+                <div class="section-padding"></div>
+                <!-- Pagination -->
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                </ul><!-- Pagination /- -->
+            </div>
+        </div>
+    </div><!-- Container /- -->
+    <div class="section-padding"></div>
+</div><!-- Product List /- -->
+<!-- Newsletter -->
+<div id="newsletter-section" class="newsletter-section container-fluid no-padding">
+    <!-- Container -->
+    <div Class="container">
+        <div class="row">
+            <form>
+                <h3>Subscribe Our Newsletter</h3>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                </div><!-- /input-group -->
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Your E-mail">
+                </div><!-- /input-group -->
+                <input type="submit" value="Go" />
+            </form>
+        </div>
+    </div><!-- Container -->
+</div>
