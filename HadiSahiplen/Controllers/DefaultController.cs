@@ -24,9 +24,13 @@ namespace HadiSahiplen.Controllers
             ViewBag.Adverts = Data.Data.Adverts();
             return View();
         }
-        public ActionResult AdvertDetail()
+        public ActionResult AdvertDetail(int? AdvertID,Tbl_Advert_Vİew AdvertView)
         {
-            return View();
+            ViewBag.Adverts = Data.Data.Adverts();
+            AdvertID = int.Parse(RouteData.Values["id"].ToString());
+            ViewBag.AdvertsImage = Data.Data.AdvetImages(int.Parse(AdvertID.ToString()));
+            AdvertView = Data.Data.Get_Advert(int.Parse(AdvertID.ToString()));
+            return View( AdvertView);
         }
     }
 }

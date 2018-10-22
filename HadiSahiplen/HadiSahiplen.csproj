@@ -114,6 +114,15 @@
     <Content Include="Images\AdvertsPP\3.jpg" />
     <Content Include="Images\AdvertsPP\4.jpg" />
     <Content Include="Images\AdvertsPP\5.jpeg" />
+    <Content Include="Images\Adverts\Advert1.jpg" />
+    <Content Include="Images\Adverts\Advert2.jpg" />
+    <Content Include="Images\Adverts\Advert3.jpg" />
+    <Content Include="Images\Adverts\Advert4.jpg" />
+    <Content Include="Images\Adverts\Advert5.jpg" />
+    <Content Include="Images\Adverts\Advert6.jpg" />
+    <Content Include="Images\Adverts\Advert7.jpeg" />
+    <Content Include="Images\Adverts\Advert8.jpeg" />
+    <Content Include="Images\Logo\Cats.png" />
     <Content Include="Images\icon\addto-1.png" />
     <Content Include="Images\icon\addto-2.png" />
     <Content Include="Images\icon\addto-3.png" />
@@ -275,6 +284,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbl_District.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Status.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbl_User.cs">

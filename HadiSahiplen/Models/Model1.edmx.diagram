@@ -5,12 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="18cb2972629948839222c9d5cd089b09" Name="Diagram1">
-        <EntityTypeShape EntityType="HadisahiplenModel.tbl_Advert" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HadisahiplenModel.tbl_Advert_Image" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HadisahiplenModel.tbl_City" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HadisahiplenModel.tbl_District" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HadisahiplenModel.tbl_User" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HadisahiplenModel.Tbl_Advert_Vİew" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HadisahiplenModel.tbl_Advert" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HadisahiplenModel.tbl_Advert_Image" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HadisahiplenModel.tbl_City" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HadisahiplenModel.tbl_District" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HadisahiplenModel.tbl_Status" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HadisahiplenModel.tbl_User" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HadisahiplenModel.Tbl_Advert_Vİew" Width="1.5" PointX="9.125" PointY="1.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

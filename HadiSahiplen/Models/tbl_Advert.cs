@@ -25,5 +25,7 @@ namespace HadiSahiplen.Models
         public string Pet_Type { get; set; }
         public Nullable<System.DateTime> Advert_Date { get; set; }
         public string Advert_ProfilePhoto { get; set; }
+        public string Advert_Title { get; set; }
+        public Nullable<int> Status_ID { get; set; }
     }
 }

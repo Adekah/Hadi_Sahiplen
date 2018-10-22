@@ -1,14 +1,171 @@
-﻿
+﻿@model HadiSahiplen.Models.Tbl_Advert_Vİew
 @{
     ViewBag.Title = "AdvertDetail";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-<div class=" panel col-md-12">  
-        <div class="panel-body">
 
-            <div class="col-md-6">
-        
+<div class=" panel col-md-12">
+    <div class="panel-body">
+        <div id="Advert_Title_id">
+            @Html.DisplayFor(model => model.Advert_Title, new { @id = "xxx", @style = "margin-top:150px;" })
+        </div>
+        <div class="col-md-6 ">
+
+            <div class="container">
+                <div id="main_area">
+                    <div class="row">
+                        <div id="slider-thumbs">
+                            <div id="slider">
+                                <div class="row">
+                                    <div class="carousel slide" id="myCarousel" style="margin-top: 25px;">
+                                        <div class="carousel-inner">
+                                            @{ var value = 0; var value2 = 1;}
+                                            @foreach (HadiSahiplen.Models.tbl_Advert_Image imgs in @ViewBag.AdvertsImage)
+                                            {
+                                                if (value == 0)
+                                                {
+                                                    { value = 1; }
+                                                    <div class="active item" data-slide-number="0">
+                                                        <img src="/Images/Adverts/@imgs.Image" style="width:3000px;height:500px">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="item" data-slide-number=@string.Concat(value2)>
+                                                        <img src="/Images/Adverts/@imgs.Image" style="width:3000px;height:500px">
+                                                    </div>
+                                                    value2 = value2 + 1;
+                                                }
+                                            }   <!-- Carousel nav -->
+                                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </a>
+                                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5" style="margin-top:28px;">
+
+            <label style="margin-left: 55px; margin-bottom: 0px;">Hayvan Adı:</label>
+            <div class="input-group input-group">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+
+                @Html.TextBoxFor(model => model.Pet_Name, new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
             </div>
 
+
+            <label style="margin-left: 55px; margin-bottom: 1px;margin-top:20px;">Hayvan Cinsiyeti:</label>
+
+            <div class="input-group input-group" style="">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+                @Html.TextBoxFor(model => model.Pet_Gender, new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
+            </div>
+
+
+            <label style="margin-left: 55px; margin-bottom: 1px;margin-top:20px;">Hayvan Cinsi:</label>
+
+            <div class="input-group input-group" style="">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+                @Html.TextBoxFor(model => model.Pet_Kind, new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
+            </div>
+
+
+            <label style="margin-left: 55px; margin-bottom: 1px;margin-top:20px;">İlan Bilgileri:</label>
+
+            <div class="input-group input-group" style="">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+                @Html.TextAreaFor(model => model.Pet_İnformation, new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id", @style = "height: 150px; max - width: 685px; " })
+
+            </div>
+
+            <label style="margin-left: 55px; margin-bottom: 1px;margin-top:20px;">Adres Bilgileri:</label>
+
+            <div class="input-group input-group" style="">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+                @Html.TextBoxFor(model => model.City, new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
+                @Html.TextBoxFor(model => model.District, new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
+            </div>
+
+            <label style="margin-left: 55px; margin-bottom: 1px;margin-top:20px;">İlan Tarihi : </label>
+            <div class="input-group input-group" style="">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+                @Html.TextBoxFor(model => model.Advert_Date, "{0:dd MMMM yyyy}", new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
+            </div>
+
+            <label style="margin-left: 55px; margin-bottom: 1px;margin-top:20px;">İlan Tarihi : </label>
+            <div class="input-group input-group" style="">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+                @Html.TextBoxFor(model => model.Advert_Date, "{0:dd MMMM yyyy}", new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
+            </div>
+            <label style="margin-left: 55px; margin-bottom: 1px;margin-top:20px;">İlan Durumu : </label>
+            <div class="input-group input-group" style="">
+                <span class="input-group-addon" style="background-color: #1377c5;color: white;">
+                    <i class=" fa fa-paw fa-2x"></i>
+                </span>
+                @Html.TextBoxFor(model => model.Status, "{0:dd MMMM yyyy}", new { @class = "form-control ", @readonly = "readonly", @id = "Advert_Name_id" })
+            </div>
+
+
         </div>
+    </div><hr />
+    <div style="margin-top:30px;">  <img  src="~/Images/Logo/Cats.png"/></div><hr />
+    <!-- Team -->
+    <div class="team container-fluid no-padding">
+        <div class="section-padding"></div>
+        <!-- Container -->
+        <div class="container" style="margin-top:-65px;">
+            <div class="section-header">
+                <h3>Güncel Sahiplendirme İlanları</h3>
+                <p>  <b style="color: #1377c5;font-size: 15px;">Bir kedim bile yok Demeyin Hadi Sahiplenin</b> </p>
+            </div>
+
+            <div class="row">
+                <div class="team-thumb">
+                    @foreach (HadiSahiplen.Models.Tbl_Advert_Vİew Adverts in ViewBag.Adverts)
+                    {
+                        <a href="/Default/AdvertDetail/@Adverts.Advert_ID">
+                            <div class="team-member" style="max-width:300px;">
+                                <div class="team-image-box">
+                                    <img src="~/Images/AdvertsPP/@Adverts.Advert_ProfilePhoto" alt="Team Member" style="height:380px;">
+                                    <div class="team-content"><h3><b>@Adverts.Pet_Name</b><span>@Adverts.Pet_Kind</span><span>@Adverts.City/@Adverts.District</span></h3></div>
+
+                                </div>
+                                <div class="team-social-icon">
+                                    <ul class="list-inline">
+                                        İLAN PROFİLİNE GİT
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+
+                    }
+                </div>
+            </div>
+        </div><!-- Container /- -->
+        <div class="section-padding"></div>
+    </div><!-- Team /- -->
+
 </div>
+ 

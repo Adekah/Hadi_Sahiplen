@@ -5,10 +5,31 @@
     margin-bottom: -5px;
     font-size: 17px
 }
+
 #advert_box {
     background-color: #3c88c4;
     width: 300px;
     height: 450px;
     color: white;
-    border-radius:30px;
+    border-radius: 30px;
+}
+
+#Advert_Name_id {
+    background-color: white;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+#Advert_Title_id {
+    text-align: center;
+    background-color: #ffbe01;
+    color: white;
+    font-weight: 800;
+    font-family: cursive;
+    font-size: 18px;
+}
+#xxx{
+    margin-top:30px;
 }

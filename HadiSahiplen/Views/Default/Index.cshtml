@@ -19,7 +19,7 @@
             <div class="team-thumb">
                 @foreach (HadiSahiplen.Models.Tbl_Advert_Vİew Adverts in ViewBag.Adverts)
                 {
-
+                <a href="/Default/AdvertDetail/@Adverts.Advert_ID">
                     <div class="team-member" style="max-width:300px;">
                         <div class="team-image-box">
                             <img src="~/Images/AdvertsPP/@Adverts.Advert_ProfilePhoto" alt="Team Member" style="height:380px;">
@@ -28,14 +28,11 @@
                         </div>
                         <div class="team-social-icon">
                             <ul class="list-inline">
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                İLAN PROFİLİNE GİT
                             </ul>
                         </div>
                     </div>
-
+                </a>
 
                 }
             </div>
@@ -44,7 +41,7 @@
     <div class="section-padding"></div>
 </div><!-- Team /- -->
 
-<!-- Intro -->
+
 
 <div id="intro" class="intro container-fluid no-padding">
     <div class="section-padding"></div>

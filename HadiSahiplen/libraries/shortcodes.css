@@ -768,11 +768,13 @@
 	z-index: -1;
 	opacity: 0;
 }
-.team-social-icon .list-inline {
-	background-color: #1377c5;
-	padding: 12px;
-	margin-left: 0px;
-}
+    .team-social-icon .list-inline {
+        background-color: #1377c5;
+        padding: 12px;
+        margin-left: 0px;
+        color: white;
+        font-weight: 800;
+    }
 .team-social-icon .list-inline li {
 	border: none;
 	margin-right: 5px;

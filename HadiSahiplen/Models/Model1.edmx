@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HadisahiplenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HadisahiplenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_Advert">
           <Key>
             <PropertyRef Name="Advert_ID" />
@@ -14,12 +14,14 @@
           <Property Name="Pet_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Pet_Gender" Type="nvarchar" MaxLength="20" />
           <Property Name="Pet_Kind" Type="nvarchar" MaxLength="50" />
-          <Property Name="Pet_İnformation" Type="nvarchar" MaxLength="150" />
+          <Property Name="Pet_İnformation" Type="nvarchar(max)" />
           <Property Name="CityID" Type="int" />
           <Property Name="DistrictID" Type="int" />
           <Property Name="Pet_Type" Type="nvarchar" MaxLength="30" />
           <Property Name="Advert_Date" Type="date" />
           <Property Name="Advert_ProfilePhoto" Type="nvarchar" MaxLength="50" />
+          <Property Name="Advert_Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status_ID" Type="int" />
         </EntityType>
         <EntityType Name="tbl_Advert_Image">
           <Key>
@@ -43,6 +45,13 @@
           <Property Name="DistrictID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CityID" Type="smallint" Nullable="false" />
           <Property Name="District" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Status">
+          <Key>
+            <PropertyRef Name="Status_ID" />
+          </Key>
+          <Property Name="Status_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tbl_User">
           <Key>
@@ -72,7 +81,7 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
           <Property Name="Pet_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Pet_Gender" Type="nvarchar" MaxLength="20" />
           <Property Name="Pet_Kind" Type="nvarchar" MaxLength="50" />
-          <Property Name="Pet_İnformation" Type="nvarchar" MaxLength="150" />
+          <Property Name="Pet_İnformation" Type="nvarchar(max)" />
           <Property Name="CityID" Type="int" />
           <Property Name="DistrictID" Type="int" />
           <Property Name="Pet_Type" Type="nvarchar" MaxLength="30" />
@@ -80,12 +89,16 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
           <Property Name="Advert_ProfilePhoto" Type="nvarchar" MaxLength="50" />
           <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="District" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Advert_Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status_ID" Type="int" />
         </EntityType>
         <EntityContainer Name="HadisahiplenModelStoreContainer">
           <EntitySet Name="tbl_Advert" EntityType="Self.tbl_Advert" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Advert_Image" EntityType="Self.tbl_Advert_Image" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_City" EntityType="Self.tbl_City" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_District" EntityType="Self.tbl_District" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Status" EntityType="Self.tbl_Status" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_User" EntityType="Self.tbl_User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Advert_Vİew" EntityType="Self.Tbl_Advert_Vİew" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -101,15 +114,26 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
     [Tbl_Advert_Vİew].[Advert_Date] AS [Advert_Date], 
     [Tbl_Advert_Vİew].[Advert_ProfilePhoto] AS [Advert_ProfilePhoto], 
     [Tbl_Advert_Vİew].[City] AS [City], 
-    [Tbl_Advert_Vİew].[District] AS [District]
+    [Tbl_Advert_Vİew].[District] AS [District], 
+    [Tbl_Advert_Vİew].[Advert_Title] AS [Advert_Title], 
+    [Tbl_Advert_Vİew].[Status] AS [Status], 
+    [Tbl_Advert_Vİew].[Status_ID] AS [Status_ID]
     FROM [dbo].[Tbl_Advert_Vİew] AS [Tbl_Advert_Vİew]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HadisahiplenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HadisahiplenEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Advert" EntityType="HadisahiplenModel.tbl_Advert" />
+          <EntitySet Name="tbl_Advert_Image" EntityType="HadisahiplenModel.tbl_Advert_Image" />
+          <EntitySet Name="tbl_City" EntityType="HadisahiplenModel.tbl_City" />
+          <EntitySet Name="tbl_District" EntityType="HadisahiplenModel.tbl_District" />
+          <EntitySet Name="tbl_Status" EntityType="HadisahiplenModel.tbl_Status" />
+          <EntitySet Name="tbl_User" EntityType="HadisahiplenModel.tbl_User" />
+          <EntitySet Name="Tbl_Advert_Vİew" EntityType="HadisahiplenModel.Tbl_Advert_Vİew" />
+        </EntityContainer>
         <EntityType Name="tbl_Advert">
           <Key>
             <PropertyRef Name="Advert_ID" />
@@ -119,12 +143,14 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
           <Property Name="Pet_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Pet_Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Pet_Kind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Pet_İnformation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Pet_İnformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CityID" Type="Int32" />
           <Property Name="DistrictID" Type="Int32" />
           <Property Name="Pet_Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Advert_Date" Type="DateTime" Precision="0" />
           <Property Name="Advert_ProfilePhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Advert_Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Status_ID" Type="Int32" />
         </EntityType>
         <EntityType Name="tbl_Advert_Image">
           <Key>
@@ -139,7 +165,7 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
             <PropertyRef Name="CityID" />
           </Key>
           <Property Name="CityID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_District">
           <Key>
@@ -147,7 +173,14 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
           </Key>
           <Property Name="DistrictID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CityID" Type="Int16" Nullable="false" />
-          <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="District" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Status">
+          <Key>
+            <PropertyRef Name="Status_ID" />
+          </Key>
+          <Property Name="Status_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_User">
           <Key>
@@ -159,7 +192,7 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
           <Property Name="CityID" Type="Int32" />
           <Property Name="DistrictID" Type="Int32" />
           <Property Name="User_Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="User_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="User_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="User_Tel" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -175,24 +208,19 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
           <Property Name="Pet_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Pet_Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Pet_Kind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Pet_İnformation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Pet_İnformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CityID" Type="Int32" />
           <Property Name="DistrictID" Type="Int32" />
           <Property Name="Pet_Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Advert_Date" Type="DateTime" Precision="0" />
           <Property Name="Advert_ProfilePhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="District" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Advert_Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status_ID" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="HadisahiplenEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tbl_Advert" EntityType="Self.tbl_Advert" />
-          <EntitySet Name="tbl_Advert_Image" EntityType="Self.tbl_Advert_Image" />
-          <EntitySet Name="tbl_City" EntityType="Self.tbl_City" />
-          <EntitySet Name="tbl_District" EntityType="Self.tbl_District" />
-          <EntitySet Name="tbl_User" EntityType="Self.tbl_User" />
-          <EntitySet Name="Tbl_Advert_Vİew" EntityType="Self.Tbl_Advert_Vİew" />
-        </EntityContainer>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -201,77 +229,90 @@ warning 6002: The table/view 'Hadisahiplen.dbo.Tbl_Advert_Vİew' does not have a
           <EntitySetMapping Name="tbl_Advert">
             <EntityTypeMapping TypeName="HadisahiplenModel.tbl_Advert">
               <MappingFragment StoreEntitySet="tbl_Advert">
-                <ScalarProperty Name="Advert_ID" ColumnName="Advert_ID" />
-                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
-                <ScalarProperty Name="Pet_Name" ColumnName="Pet_Name" />
-                <ScalarProperty Name="Pet_Gender" ColumnName="Pet_Gender" />
-                <ScalarProperty Name="Pet_Kind" ColumnName="Pet_Kind" />
-                <ScalarProperty Name="Pet_İnformation" ColumnName="Pet_İnformation" />
-                <ScalarProperty Name="CityID" ColumnName="CityID" />
-                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
-                <ScalarProperty Name="Pet_Type" ColumnName="Pet_Type" />
-                <ScalarProperty Name="Advert_Date" ColumnName="Advert_Date" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+                <ScalarProperty Name="Advert_Title" ColumnName="Advert_Title" />
                 <ScalarProperty Name="Advert_ProfilePhoto" ColumnName="Advert_ProfilePhoto" />
+                <ScalarProperty Name="Advert_Date" ColumnName="Advert_Date" />
+                <ScalarProperty Name="Pet_Type" ColumnName="Pet_Type" />
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="Pet_İnformation" ColumnName="Pet_İnformation" />
+                <ScalarProperty Name="Pet_Kind" ColumnName="Pet_Kind" />
+                <ScalarProperty Name="Pet_Gender" ColumnName="Pet_Gender" />
+                <ScalarProperty Name="Pet_Name" ColumnName="Pet_Name" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Advert_ID" ColumnName="Advert_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Advert_Image">
             <EntityTypeMapping TypeName="HadisahiplenModel.tbl_Advert_Image">
               <MappingFragment StoreEntitySet="tbl_Advert_Image">
-                <ScalarProperty Name="Image_ID" ColumnName="Image_ID" />
-                <ScalarProperty Name="Advert_ID" ColumnName="Advert_ID" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Advert_ID" ColumnName="Advert_ID" />
+                <ScalarProperty Name="Image_ID" ColumnName="Image_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_City">
             <EntityTypeMapping TypeName="HadisahiplenModel.tbl_City">
               <MappingFragment StoreEntitySet="tbl_City">
-                <ScalarProperty Name="CityID" ColumnName="CityID" />
                 <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_District">
             <EntityTypeMapping TypeName="HadisahiplenModel.tbl_District">
               <MappingFragment StoreEntitySet="tbl_District">
-                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
-                <ScalarProperty Name="CityID" ColumnName="CityID" />
                 <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Status">
+            <EntityTypeMapping TypeName="HadisahiplenModel.tbl_Status">
+              <MappingFragment StoreEntitySet="tbl_Status">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_User">
             <EntityTypeMapping TypeName="HadisahiplenModel.tbl_User">
               <MappingFragment StoreEntitySet="tbl_User">
-                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
-                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
-                <ScalarProperty Name="User_Surname" ColumnName="User_Surname" />
-                <ScalarProperty Name="CityID" ColumnName="CityID" />
-                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
-                <ScalarProperty Name="User_Adress" ColumnName="User_Adress" />
-                <ScalarProperty Name="User_Email" ColumnName="User_Email" />
-                <ScalarProperty Name="User_Password" ColumnName="User_Password" />
                 <ScalarProperty Name="User_Tel" ColumnName="User_Tel" />
+                <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+                <ScalarProperty Name="User_Email" ColumnName="User_Email" />
+                <ScalarProperty Name="User_Adress" ColumnName="User_Adress" />
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="User_Surname" ColumnName="User_Surname" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tbl_Advert_Vİew">
             <EntityTypeMapping TypeName="HadisahiplenModel.Tbl_Advert_Vİew">
               <MappingFragment StoreEntitySet="Tbl_Advert_Vİew">
-                <ScalarProperty Name="Advert_ID" ColumnName="Advert_ID" />
-                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
-                <ScalarProperty Name="Pet_Name" ColumnName="Pet_Name" />
-                <ScalarProperty Name="Pet_Gender" ColumnName="Pet_Gender" />
-                <ScalarProperty Name="Pet_Kind" ColumnName="Pet_Kind" />
-                <ScalarProperty Name="Pet_İnformation" ColumnName="Pet_İnformation" />
-                <ScalarProperty Name="CityID" ColumnName="CityID" />
-                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
-                <ScalarProperty Name="Pet_Type" ColumnName="Pet_Type" />
-                <ScalarProperty Name="Advert_Date" ColumnName="Advert_Date" />
-                <ScalarProperty Name="Advert_ProfilePhoto" ColumnName="Advert_ProfilePhoto" />
-                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Advert_Title" ColumnName="Advert_Title" />
                 <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Advert_ProfilePhoto" ColumnName="Advert_ProfilePhoto" />
+                <ScalarProperty Name="Advert_Date" ColumnName="Advert_Date" />
+                <ScalarProperty Name="Pet_Type" ColumnName="Pet_Type" />
+                <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="Pet_İnformation" ColumnName="Pet_İnformation" />
+                <ScalarProperty Name="Pet_Kind" ColumnName="Pet_Kind" />
+                <ScalarProperty Name="Pet_Gender" ColumnName="Pet_Gender" />
+                <ScalarProperty Name="Pet_Name" ColumnName="Pet_Name" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Advert_ID" ColumnName="Advert_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

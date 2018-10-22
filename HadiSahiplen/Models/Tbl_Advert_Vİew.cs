@@ -27,5 +27,8 @@ namespace HadiSahiplen.Models
         public string Advert_ProfilePhoto { get; set; }
         public string City { get; set; }
         public string District { get; set; }
+        public string Advert_Title { get; set; }
+        public string Status { get; set; }
+        public Nullable<int> Status_ID { get; set; }
     }
 }

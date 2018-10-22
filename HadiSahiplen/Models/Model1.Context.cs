@@ -29,6 +29,7 @@ namespace HadiSahiplen.Models
         public virtual DbSet<tbl_Advert_Image> tbl_Advert_Image { get; set; }
         public virtual DbSet<tbl_City> tbl_City { get; set; }
         public virtual DbSet<tbl_District> tbl_District { get; set; }
+        public virtual DbSet<tbl_Status> tbl_Status { get; set; }
         public virtual DbSet<tbl_User> tbl_User { get; set; }
         public virtual DbSet<Tbl_Advert_Vİew> Tbl_Advert_Vİew { get; set; }
     }
