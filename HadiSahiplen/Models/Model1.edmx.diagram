@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="HadisahiplenModel.tbl_District" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="HadisahiplenModel.tbl_Status" Width="1.5" PointX="4.75" PointY="3.75" />
         <EntityTypeShape EntityType="HadisahiplenModel.tbl_User" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HadisahiplenModel.Tbl_Advert_Vİew" Width="1.5" PointX="9.125" PointY="1.125" />
+        <EntityTypeShape EntityType="HadisahiplenModel.Tbl_Advert_Vİew" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
