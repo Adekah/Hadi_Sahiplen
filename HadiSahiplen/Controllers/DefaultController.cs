@@ -32,5 +32,10 @@ namespace HadiSahiplen.Controllers
             AdvertView = Data.Data.Get_Advert(int.Parse(AdvertID.ToString()));
             return View( AdvertView);
         }
+        [HttpPost]
+        public ActionResult UserSignup(Array _userinformation)
+        {
+            return View();
+        }
     }
 }

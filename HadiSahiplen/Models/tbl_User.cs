@@ -23,5 +23,6 @@ namespace HadiSahiplen.Models
         public string User_Email { get; set; }
         public string User_Password { get; set; }
         public string User_Tel { get; set; }
+        public string User_kvk { get; set; }
     }
 }
